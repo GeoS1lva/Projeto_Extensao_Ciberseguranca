@@ -1,7 +1,9 @@
 # 🛡️ CyberGuard — Plataforma Educacional de Cibersegurança
 
+🌐 **[Acesse o site aqui](https://geos1lva.github.io/Projeto_Extensao_Ciberseguranca/)**
+
 > Projeto de Extensão Universitária — 5º Semestre de Análise e Desenvolvimento de Sistemas  
-> **UNICIVE** · 2024
+> **UNICIVE** · 2026
 
 ---
 
