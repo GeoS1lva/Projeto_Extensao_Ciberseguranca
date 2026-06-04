@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <a class="navbar__logo" routerLink="/">CYBER<span>GUARD</span></a>
+
+  <button class="navbar__hamburger" (click)="toggleMenu()" [class.navbar__hamburger--open]="menuOpen" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="navbar__links" [class.navbar__links--open]="menuOpen">
+    <li><a routerLink="/protecao" (click)="menuOpen = false">Proteção</a></li>
+    <li><a routerLink="/casos" (click)="menuOpen = false">Casos</a></li>
+    <li><a routerLink="/" fragment="sobre" (click)="menuOpen = false">Sobre</a></li>
+  </ul>
+
+  <app-button variant="outline" class="navbar__cta">Acesso Seguro</app-button>
+</nav>

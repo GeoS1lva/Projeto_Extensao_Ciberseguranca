@@ -1,0 +1,23 @@
+<div class="vpn-split">
+  <div class="vpn-split__do">
+    <h3>
+      <i class="ti ti-check" aria-hidden="true"></i>
+      Faça em redes públicas
+    </h3>
+    <div class="vpn-split__item" *ngFor="let item of doItems">
+      <i [class]="'ti ' + item.icon + ' vpn-split__item-icon'" aria-hidden="true"></i>
+      <span>{{ item.text }}</span>
+    </div>
+  </div>
+
+  <div class="vpn-split__dont">
+    <h3>
+      <i class="ti ti-x" aria-hidden="true"></i>
+      Nunca faça em redes públicas
+    </h3>
+    <div class="vpn-split__item" *ngFor="let item of dontItems">
+      <i [class]="'ti ' + item.icon + ' vpn-split__item-icon'" aria-hidden="true"></i>
+      <span>{{ item.text }}</span>
+    </div>
+  </div>
+</div>

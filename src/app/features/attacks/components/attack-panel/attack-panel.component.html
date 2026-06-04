@@ -1,0 +1,58 @@
+<div class="attack-panel" [ngClass]="'attack-panel--' + attack.colorClass">
+  <div class="attack-panel__header">
+    <div class="attack-panel__year-badge">{{ attack.yearBadge }}</div>
+    <div class="attack-panel__title-block">
+      <h2>{{ attack.title }}</h2>
+      <div class="attack-panel__subtitle">{{ attack.subtitle }}</div>
+    </div>
+    <div class="attack-panel__classification">
+      <div *ngFor="let badge of attack.badges">
+        <app-classification-badge [badge]="badge"></app-classification-badge>
+      </div>
+    </div>
+  </div>
+
+  <div class="attack-panel__dmg-grid">
+    <div class="attack-panel__dmg-card" *ngFor="let card of attack.damageCards" [ngClass]="'attack-panel__dmg-card--' + card.color">
+      <div class="attack-panel__dmg-num">{{ card.value }}</div>
+      <div class="attack-panel__dmg-label">{{ card.label }}</div>
+    </div>
+  </div>
+
+  <div class="attack-panel__body">
+    <div class="attack-panel__info-block" *ngFor="let block of attack.infoBlocks">
+      <h3>
+        <i [class]="'ti ' + block.icon" aria-hidden="true"></i>
+        {{ block.title }}
+      </h3>
+      <p [innerHTML]="block.content"></p>
+    </div>
+
+    <div class="attack-panel__tech-block">
+      <h3>
+        <i class="ti ti-circuit-board" aria-hidden="true"></i>
+        Anatomia do ataque — passo a passo
+      </h3>
+      <div class="attack-panel__tech-steps">
+        <div class="attack-panel__tech-step" *ngFor="let step of attack.techSteps">
+          <div class="attack-panel__step-num">{{ step.num }}</div>
+          <div class="attack-panel__step-title">{{ step.title }}</div>
+          <div class="attack-panel__step-desc">{{ step.description }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-quote-block *ngIf="attack.quote" [text]="attack.quote.text" [cite]="attack.quote.cite"></app-quote-block>
+
+  <div class="attack-panel__legacy">
+    <h3>
+      <i class="ti ti-history" aria-hidden="true"></i>
+      {{ attack.legacyTitle }}
+    </h3>
+    <p [innerHTML]="attack.legacyContent"></p>
+    <div class="attack-panel__victims">
+      <app-victim-tag *ngFor="let v of attack.victims" [label]="v"></app-victim-tag>
+    </div>
+  </div>
+</div>

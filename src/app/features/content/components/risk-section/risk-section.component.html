@@ -1,0 +1,12 @@
+<div class="risks">
+  <div class="risk" *ngFor="let risk of risks" [ngClass]="'risk--' + risk.color">
+    <div class="risk__header">
+      <span class="risk__badge">{{ risk.level }}</span>
+      <span class="risk__title">
+        <i [class]="'ti ' + risk.icon" aria-hidden="true"></i>
+        {{ risk.title }}
+      </span>
+    </div>
+    <p class="risk__body">{{ risk.body }}</p>
+  </div>
+</div>

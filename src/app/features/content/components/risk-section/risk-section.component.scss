@@ -1,0 +1,62 @@
+.risks { display: flex; flex-direction: column; gap: 16px; }
+
+.risk {
+  padding: 28px 24px;
+
+  &--red {
+    background: rgba(255, 74, 106, 0.04);
+    border: 1px solid rgba(255, 74, 106, 0.15);
+
+    .risk__badge { color: var(--color-red); border-color: var(--color-red); }
+    .risk__title { color: #CC3A58; }
+    .risk__body { color: #5A3A46; }
+  }
+
+  &--amber {
+    background: rgba(255, 184, 64, 0.04);
+    border: 1px solid rgba(255, 184, 64, 0.15);
+
+    .risk__badge { color: var(--color-amber); border-color: var(--color-amber); }
+    .risk__title { color: #B07820; }
+    .risk__body { color: #5A4A2A; }
+  }
+
+  &--blue {
+    background: rgba(0, 128, 255, 0.04);
+    border: 1px solid rgba(0, 128, 255, 0.15);
+
+    .risk__badge { color: var(--color-blue); border-color: var(--color-blue); }
+    .risk__title { color: #1A4A80; }
+    .risk__body { color: #2A4A6A; }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  &__badge {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    border: 1px solid;
+    padding: 3px 8px;
+  }
+
+  &__title {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    i { font-size: 15px; margin-right: 6px; }
+  }
+
+  &__body {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}

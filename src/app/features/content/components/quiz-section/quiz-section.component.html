@@ -1,0 +1,20 @@
+<div class="quiz">
+  <div class="quiz__block" *ngFor="let question of questions; let qi = index">
+    <div class="quiz__tag">{{ question.tag }}</div>
+    <div class="quiz__question">{{ question.question }}</div>
+    <div class="quiz__options">
+      <button
+        class="quiz__option"
+        *ngFor="let option of question.options; let oi = index"
+        [ngClass]="getOptionClass(qi, oi)"
+        [disabled]="states[qi].answered"
+        (click)="answer(qi, oi)">
+        <span class="quiz__option-letter">{{ option.letter }}</span>
+        {{ option.text }}
+      </button>
+    </div>
+    <div *ngIf="states[qi].answered" class="quiz__feedback" [ngClass]="isCorrect(qi) ? 'quiz__feedback--ok' : 'quiz__feedback--fail'">
+      {{ isCorrect(qi) ? question.feedbackCorrect : question.feedbackWrong }}
+    </div>
+  </div>
+</div>

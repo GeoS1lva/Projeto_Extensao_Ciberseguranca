@@ -1,0 +1,9 @@
+<div class="attack-nav">
+  <button
+    class="attack-nav__btn"
+    *ngFor="let attack of attacks"
+    [class.attack-nav__btn--active]="attack.id === activeId"
+    (click)="select(attack.id)">
+    {{ attack.navLabel }}
+  </button>
+</div>

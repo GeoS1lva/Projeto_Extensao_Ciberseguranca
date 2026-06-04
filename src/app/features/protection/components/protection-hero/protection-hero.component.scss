@@ -1,0 +1,44 @@
+.protection-hero {
+  padding: 48px 36px 40px;
+  border-bottom: 1px solid rgba(0, 255, 180, 0.1);
+
+  &__tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--color-green);
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+
+    &::before { content: '// '; }
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 34px;
+    color: var(--text-heading);
+    line-height: 1.1;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+
+    em {
+      font-style: normal;
+      color: var(--color-green);
+    }
+  }
+
+  &__desc {
+    font-size: 13px;
+    color: #5A7A96;
+    line-height: 1.8;
+    max-width: 560px;
+    font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
+    padding: 32px 20px 28px;
+
+    &__title { font-size: 26px; }
+  }
+}

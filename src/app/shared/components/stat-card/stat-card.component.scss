@@ -1,0 +1,34 @@
+.stat-card {
+  padding: 28px 32px;
+  border-right: 1px solid rgba(0, 255, 180, 0.08);
+
+  &:last-child { border-right: none; }
+
+  &__num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--color-green);
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+
+    span { color: var(--color-blue); }
+  }
+
+  &__label {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 11px;
+    color: #4A6580;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 600px) {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 255, 180, 0.08);
+    padding: 20px;
+
+    &:last-child { border-bottom: none; }
+  }
+}

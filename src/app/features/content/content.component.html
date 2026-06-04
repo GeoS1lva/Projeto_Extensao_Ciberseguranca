@@ -1,0 +1,69 @@
+<div class="content-page grid-bg">
+  <app-page-hero class="z-content"></app-page-hero>
+
+  <app-table-of-contents
+    class="z-content"
+    [items]="tocItems"
+    [activeId]="activeSection"
+    (itemSelected)="onTocSelected($event)">
+  </app-table-of-contents>
+
+  <section class="content-page__section z-content" id="definicao">
+    <app-section-tag text="01 — definição"></app-section-tag>
+    <h2 class="content-page__title">O que é Cibersegurança?</h2>
+    <p class="content-page__lead">
+      Cibersegurança é o conjunto de práticas, tecnologias e processos criados para proteger sistemas,
+      redes e dados de ataques digitais, acessos não autorizados e danos. Vai muito além de antivírus.
+    </p>
+    <app-definition-grid></app-definition-grid>
+  </section>
+
+  <section class="content-page__section z-content" id="pilares">
+    <app-section-tag text="02 — pilares fundamentais"></app-section-tag>
+    <h2 class="content-page__title">A tríade CIA</h2>
+    <p class="content-page__lead">
+      Todo sistema de segurança é avaliado por três propriedades fundamentais. Se qualquer uma falhar,
+      a segurança está comprometida.
+    </p>
+    <app-pillars-section></app-pillars-section>
+  </section>
+
+  <section class="content-page__section z-content" id="ameacas-reais">
+    <app-section-tag text="03 — ameaças reais"></app-section-tag>
+    <h2 class="content-page__title">Riscos que você enfrenta hoje</h2>
+    <p class="content-page__lead">
+      Não são apenas empresas que são atacadas. Usuários comuns são alvos constantes de diferentes tipos
+      de ameaças digitais.
+    </p>
+    <app-risk-section></app-risk-section>
+  </section>
+
+  <section class="content-page__section z-content" id="protecao">
+    <app-section-tag text="04 — como se proteger"></app-section-tag>
+    <h2 class="content-page__title">Práticas essenciais de proteção</h2>
+    <p class="content-page__lead">
+      Segurança digital não exige ser especialista. Estas práticas eliminam a maioria dos riscos comuns
+      para usuários e organizações.
+    </p>
+    <app-tips-section></app-tips-section>
+  </section>
+
+  <section class="content-page__section z-content" id="camadas">
+    <app-section-tag text="05 — defesa em profundidade"></app-section-tag>
+    <h2 class="content-page__title">Camadas de segurança</h2>
+    <p class="content-page__lead">
+      Segurança eficaz funciona em camadas — se uma falhar, as outras contêm o dano. Esse modelo é chamado
+      de "defesa em profundidade".
+    </p>
+    <app-layer-diagram></app-layer-diagram>
+  </section>
+
+  <section class="content-page__section z-content" id="quiz">
+    <app-section-tag text="06 — teste seu conhecimento"></app-section-tag>
+    <h2 class="content-page__title">Você estaria seguro?</h2>
+    <p class="content-page__lead" style="margin-bottom: 20px;">
+      Responda para testar o que aprendeu sobre cibersegurança.
+    </p>
+    <app-quiz-section></app-quiz-section>
+  </section>
+</div>

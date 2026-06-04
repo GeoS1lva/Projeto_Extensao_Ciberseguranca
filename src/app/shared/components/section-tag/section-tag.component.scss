@@ -1,0 +1,12 @@
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  &--blue { color: var(--color-blue); }
+  &--green { color: var(--color-green); }
+
+  &::before { content: '// '; }
+}

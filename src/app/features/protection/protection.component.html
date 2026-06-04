@@ -1,0 +1,57 @@
+<div class="protection-page grid-bg">
+  <app-protection-hero class="z-content"></app-protection-hero>
+
+  <section class="protection-page__section z-content">
+    <app-section-header
+      tag="01 — pilares da proteção"
+      title="As 6 camadas de defesa pessoal"
+      lead="Segurança eficaz funciona em camadas sobrepostas. Se uma falhar, as outras contêm o dano. Implante todas para proteção real.">
+    </app-section-header>
+    <app-pillars-grid></app-pillars-grid>
+  </section>
+
+  <section class="protection-page__section z-content">
+    <app-section-header
+      tag="02 — gerador de senhas"
+      title="Gerador de senhas seguras"
+      lead="Crie senhas criptograficamente fortes. Configure o comprimento e os tipos de caracteres. Nenhuma senha é transmitida ou armazenada — tudo ocorre no seu navegador.">
+    </app-section-header>
+    <app-password-generator></app-password-generator>
+  </section>
+
+  <section class="protection-page__section z-content">
+    <app-section-header
+      tag="03 — autenticação multifator"
+      title="MFA: escolha o método certo"
+      lead="Nem todo segundo fator é igual. Alguns são muito mais seguros que outros — e a diferença pode ser decisiva contra ataques direcionados.">
+    </app-section-header>
+    <app-mfa-grid></app-mfa-grid>
+  </section>
+
+  <section class="protection-page__section z-content">
+    <app-section-header
+      tag="04 — checklist de segurança"
+      title="Avalie sua proteção agora"
+      lead="Marque os itens que você já implementou. Veja sua pontuação de segurança em tempo real.">
+    </app-section-header>
+    <app-security-checklist></app-security-checklist>
+  </section>
+
+  <section class="protection-page__section z-content">
+    <app-section-header
+      tag="05 — wi-fi e navegação"
+      title="Redes públicas: o que fazer e evitar"
+      lead="Redes Wi-Fi abertas são o ambiente favorito de atacantes para interceptação de tráfego e roubo de sessões. Conheça as regras.">
+    </app-section-header>
+    <app-vpn-split [doItems]="vpnDo" [dontItems]="vpnDont"></app-vpn-split>
+  </section>
+
+  <section class="protection-page__section z-content">
+    <app-section-header
+      tag="06 — hábitos essenciais"
+      title="10 hábitos que mudam tudo"
+      lead="Mais de 80% das violações envolvem erro humano. Estes hábitos simples, praticados consistentemente, fecham a maioria das brechas comportamentais.">
+    </app-section-header>
+    <app-habits-list></app-habits-list>
+  </section>
+</div>
