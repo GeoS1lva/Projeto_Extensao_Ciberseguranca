@@ -1,0 +1,30 @@
+.section-header {
+  &__tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--color-blue);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    &::before { content: '// '; }
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 24px;
+    color: #D0DFEE;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+
+  &__lead {
+    font-size: 12px;
+    color: #4A6A84;
+    line-height: 1.8;
+    max-width: 580px;
+    margin-bottom: 28px;
+    font-weight: 300;
+  }
+}

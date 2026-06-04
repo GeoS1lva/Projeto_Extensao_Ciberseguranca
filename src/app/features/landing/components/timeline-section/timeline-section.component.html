@@ -1,0 +1,13 @@
+<div class="timeline-section">
+  <app-section-tag text="02 — linha do tempo"></app-section-tag>
+  <h2 class="timeline-section__title">Ataques que mudaram a história</h2>
+  <div class="timeline-section__timeline">
+    <div class="timeline-section__item" *ngFor="let item of timelineItems">
+      <div class="timeline-section__year">{{ item.year }}</div>
+      <div class="timeline-section__content">
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

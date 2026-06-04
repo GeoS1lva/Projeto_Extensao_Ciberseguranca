@@ -1,0 +1,22 @@
+<div class="tips">
+  <div class="tips__block" *ngFor="let tip of tips">
+    <div class="tips__block-tag">{{ tip.tag }}</div>
+    <h4 class="tips__block-title">
+      <i [class]="'ti ' + tip.icon" aria-hidden="true"></i>
+      {{ tip.title }}
+    </h4>
+    <p class="tips__block-desc">{{ tip.description }}</p>
+  </div>
+
+  <div class="tips__checklist">
+    <div class="tips__check-item" *ngFor="let check of checks">
+      <div class="tips__check-icon" [ngClass]="'tips__check-icon--' + check.iconColor">
+        <i [class]="'ti ' + check.icon" aria-hidden="true"></i>
+      </div>
+      <div class="tips__check-text">
+        <h4>{{ check.title }}</h4>
+        <p>{{ check.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

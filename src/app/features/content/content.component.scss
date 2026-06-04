@@ -1,0 +1,31 @@
+.content-page {
+  min-height: 100vh;
+
+  &__section {
+    padding: 52px 36px;
+    border-bottom: 1px solid rgba(0, 255, 180, 0.06);
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--text-subheading);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+
+  &__lead {
+    font-size: 13px;
+    color: #5A7A96;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
+    &__section { padding: 36px 20px; }
+    &__title { font-size: 22px; }
+  }
+}

@@ -1,0 +1,80 @@
+.vpn-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  &__do {
+    background: rgba(0, 255, 180, 0.04);
+    border: 1px solid rgba(0, 255, 180, 0.15);
+    padding: 18px;
+
+    h3 {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #008060;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      i { font-size: 14px; }
+    }
+  }
+
+  &__dont {
+    background: rgba(255, 74, 106, 0.04);
+    border: 1px solid rgba(255, 74, 106, 0.15);
+    padding: 18px;
+
+    h3 {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #882A40;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      i { font-size: 14px; }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    line-height: 1.6;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
+  &__do &__item {
+    color: #2A6A50;
+
+    .vpn-split__item-icon { color: var(--color-green); }
+  }
+
+  &__dont &__item {
+    color: #6A2A3A;
+
+    .vpn-split__item-icon { color: var(--color-red); }
+  }
+
+  &__item-icon {
+    flex-shrink: 0;
+    font-size: 13px;
+    margin-top: 1px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

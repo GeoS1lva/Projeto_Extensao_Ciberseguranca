@@ -1,0 +1,32 @@
+<section class="hero" id="hero">
+  <div class="hero__content">
+    <div class="hero__tag">// PROTOCOLO ATIVO</div>
+    <h1 class="hero__title">O mundo digital<br>está sob <em>ataque</em></h1>
+    <p class="hero__sub">
+      A cada 39 segundos, um sistema é comprometido. Entenda as ameaças,
+      os vetores de ataque e como organizações se defendem no cenário atual
+      de cibersegurança.
+    </p>
+    <div class="hero__actions">
+      <app-button variant="primary" (clicked)="navigateToContent()">Explorar Conteúdo</app-button>
+      <app-button variant="ghost">→ ver relatório 2024</app-button>
+    </div>
+  </div>
+
+  <div class="hero__visual" aria-hidden="true">
+    <div class="hero__orbit hero__orbit--outer"></div>
+    <div class="hero__orbit hero__orbit--inner"></div>
+    <div class="hero__dot hero__dot--blue"></div>
+    <div class="hero__dot hero__dot--green"></div>
+    <svg class="hero__shield" viewBox="0 0 130 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M65 8 L118 30 L118 75 C118 108 65 142 65 142 C65 142 12 108 12 75 L12 30 Z"
+        fill="rgba(0,255,180,0.05)" stroke="#00FFB4" stroke-width="1.5"/>
+      <path d="M65 22 L105 40 L105 76 C105 102 65 128 65 128 C65 128 25 102 25 76 L25 40 Z"
+        fill="none" stroke="rgba(0,128,255,0.3)" stroke-width="1"/>
+      <circle cx="65" cy="72" r="22" fill="none" stroke="rgba(0,255,180,0.4)" stroke-width="1"/>
+      <circle cx="65" cy="72" r="12" fill="rgba(0,255,180,0.1)" stroke="#00FFB4" stroke-width="1.5"/>
+      <path d="M57 72 L63 78 L74 66" stroke="#00FFB4" stroke-width="2" stroke-linecap="round"/>
+      <line x1="65" y1="8" x2="65" y2="22" stroke="rgba(0,255,180,0.3)" stroke-width="1" stroke-dasharray="3,3"/>
+    </svg>
+  </div>
+</section>

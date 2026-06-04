@@ -1,0 +1,6 @@
+<div class="def-grid">
+  <div class="def-grid__cell" *ngFor="let cell of cells" [ngClass]="'def-grid__cell--' + cell.color">
+    <h3 class="def-grid__cell-title">{{ cell.title }}</h3>
+    <p class="def-grid__cell-desc">{{ cell.description }}</p>
+  </div>
+</div>

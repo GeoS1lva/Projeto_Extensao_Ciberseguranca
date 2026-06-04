@@ -1,0 +1,22 @@
+<div class="checklist">
+  <div class="checklist__grid">
+    <div
+      class="checklist__item"
+      *ngFor="let item of items"
+      [class.checklist__item--done]="item.done"
+      (click)="toggle(item)">
+      <div class="checklist__box">{{ item.done ? '✓' : '' }}</div>
+      <div class="checklist__label">{{ item.label }}</div>
+    </div>
+  </div>
+
+  <div class="checklist__score-row">
+    <span class="checklist__score-label">SEU NÍVEL DE PROTEÇÃO</span>
+    <div class="checklist__bar-wrap">
+      <div class="checklist__bar" [style.width.%]="percent" [style.background]="barColor"></div>
+    </div>
+    <span class="checklist__pct" [style.color]="barColor">{{ percent }}%</span>
+  </div>
+
+  <div class="checklist__msg" [style.color]="messageColor">{{ message }}</div>
+</div>
