@@ -28,6 +28,17 @@
     }
   }
 
+  &__project {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--color-green);
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    animation: fadeInUp 0.6s ease 0.05s forwards;
+    opacity: 0;
+  }
+
   &__title {
     font-family: var(--font-display);
     font-weight: 900;
@@ -62,6 +73,35 @@
     align-items: center;
     animation: fadeInUp 0.6s ease 0.3s forwards;
     opacity: 0;
+  }
+
+  &__credit {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(0, 255, 180, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    animation: fadeInUp 0.6s ease 0.4s forwards;
+    opacity: 0;
+
+    &-author {
+      color: var(--text-heading);
+      font-weight: 500;
+    }
+
+    &-id {
+      color: var(--color-green);
+      letter-spacing: 1px;
+
+      &::before {
+        content: '·';
+        margin-right: 12px;
+        color: #6888A0;
+      }
+    }
   }
 
   &__visual {
