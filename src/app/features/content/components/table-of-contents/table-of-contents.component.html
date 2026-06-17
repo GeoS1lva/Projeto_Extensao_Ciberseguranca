@@ -1,9 +1,0 @@
-<div class="toc">
-  <button
-    class="toc__item"
-    *ngFor="let item of items"
-    [class.toc__item--active]="item.id === activeId"
-    (click)="selectItem(item.id)">
-    {{ item.label }}
-  </button>
-</div>
